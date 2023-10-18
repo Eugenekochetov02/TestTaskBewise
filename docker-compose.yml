@@ -1,0 +1,33 @@
+version: "3.7"
+
+services:
+  db:
+    image: postgres:16
+    container_name: bewise_db
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
+    # volumes:
+    #   - /DockerImg:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4
+    restart: always
+    ports:
+      - "4444:80"
+    env_file:
+      - .env
+
+  app:
+    build:
+      context: ./app
+    container_name: bewise_app
+    env_file:
+      - ./app/.env
+    command: ["/bewise_app/app.sh"]
+    ports:
+      - 80:8000
+    depends_on:
+      - db
