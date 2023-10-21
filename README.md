@@ -28,18 +28,25 @@ sudo docker-compose up
 ```
 ## Environment
 ### DB image
+ ```bash
 POSTGRES_DB
 POSTGRES_USER
 POSTGRES_PASSWORD
+```
 ### Pgadmin image
+ ```bash
 PGADMIN_DEFAULT_EMAIL
 PGADMIN_DEFAULT_PASSWORD
+```
 ### App image
+ ```bash
 DB_HOST
 DB_PORT
 DB_NAME
 DB_USER
 DB_PASS
+```
+
 ## Result
 ![POST request](/readme/post.png)
 ![Pgadmin](/readme/pg4.png)
