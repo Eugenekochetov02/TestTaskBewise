@@ -26,6 +26,20 @@ git clone git@github.com:Eugenekochetov02/TestTaskBewise.git
 cd TestTaskBewise
 sudo docker-compose up
 ```
+## Environment
+### DB image
+POSTGRES_DB
+POSTGRES_USER
+POSTGRES_PASSWORD
+### Pgadmin image
+PGADMIN_DEFAULT_EMAIL
+PGADMIN_DEFAULT_PASSWORD
+### App image
+DB_HOST
+DB_PORT
+DB_NAME
+DB_USER
+DB_PASS
 ## Result
 ![POST request](/readme/post.png)
 ![Pgadmin](/readme/pg4.png)
